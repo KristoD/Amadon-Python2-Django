@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Amadon</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'store/css/styles.css' %}">
+</head>
+<body>
+
+    <div class="items">
+        <p>Dojo Tshirt</p>
+        <p>$19.99</p>
+        <p>
+            <form action="amadon/buy" method="POST">
+                {% csrf_token %}
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input type="hidden" name="product_id" value="1">
+                <input type="submit" value="Buy!">
+            </form>
+        </p>
+    </div>
+    <div class="items">
+        <p>Dojo Sweater</p>
+        <p>$29.99</p>
+        <p>
+            <form action="amadon/buy" method="POST">
+                {% csrf_token %}
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input type="hidden" name="product_id" value="2">
+                <input type="submit" value="Buy!">
+            </form>
+        </p>
+    </div>
+    <div class="items">
+        <p>Dojo Cup</p>
+        <p>$4.99</p>
+        <p>
+            <form action="amadon/buy" method="POST">
+                {% csrf_token %}
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input type="hidden" name="product_id" value="3">
+                <input type="submit" value="Buy!">
+            </form>
+        </p>
+    </div>
+    <div class="items">
+        <p>Algorithm Book</p>
+        <p>$49.99</p>
+        <p>
+            <form action="amadon/buy" method="POST">
+                {% csrf_token %}
+                <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input type="hidden" name="product_id" value="4">
+                <input type="submit" value="Buy!">
+            </form>
+        </p>
+    </div>
+    
+</body>
+</html>
